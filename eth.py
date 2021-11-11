@@ -46,7 +46,7 @@ while P<y:
         ethadd = keys.PublicKey(public_key_bytes).to_address()			#Eth address
         blocs = requests.get("https://api.ethplorer.io/getAddressInfo/" + ethadd + "?apiKey=freekey") #Ethereum API Must create account to be better API
         ress = blocs.json()
-        balance = dict(ress)["count Transactions"]
+        balance = dict(ress)["countTransactions"]
         print ("\n " + colour_cyan + "Ethereum Random Scan" + colour_red + "---Good--Luck--Happy--Hunting--Mizogg.co.uk&Chad---" + colour_cyan + "With Balance Checker" + colour_reset) # Running Display Output
         print (colour_cyan + 'Ethereum Address                    ' + '  : '  + colour_red + ethadd + '     : ' + colour_reset + 'Transactions = ' +  str(balance)) #Ethereum address display
         print(colour_cyan +'PrivateKey' + ' : ' + colour_red + myhex + colour_reset + " : Date&Time" + seconds_to_str(), '\n') # Running Display Output
