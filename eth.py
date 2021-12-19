@@ -44,13 +44,13 @@ while P<y:
         public_key_hex = keys.PrivateKey(private_key_bytes).public_key
         public_key_bytes = bytes.fromhex(str(public_key_hex)[2:])
         ethadd = keys.PublicKey(public_key_bytes).to_address()			#Eth address
-        blocs = requests.get("https://api.ethplorer.io/getAddressInfo/" + ethadd + "?apiKey=freekey") #Ethereum API Must create account to be better API
+        blocs = requests.get("https://api.ethplorer.io/getAddressInfo/" + ethadd + "?apiKey=EK-gT2va-7M2tojY-Lsydy") #Ethereum API Must create account to be better API
         ress = blocs.json()
-        balance = dict(ress)["countTxs"]
+        balances = dict(ress)["countTxs"]
         print ("\n " + colour_cyan + "Ethereum Random Scan" + colour_red + "---Good--Luck--Happy--Hunting--Mizogg.co.uk&Chad---" + colour_cyan + "With Balance Checker" + colour_reset) # Running Display Output
-        print (colour_cyan + 'Ethereum Address                    ' + '  : '  + colour_red + ethadd + '     : ' + colour_reset + 'Transactions = ' +  str(balance)) #Ethereum address display
+        print (colour_cyan + 'Ethereum Address                    ' + '  : '  + colour_red + ethadd + '     : ' + colour_reset + 'Transactions = ' +  str(balances)) #Ethereum address display
         print(colour_cyan +'PrivateKey' + ' : ' + colour_red + myhex + colour_reset + " : Date&Time" + seconds_to_str(), '\n') # Running Display Output
-        if int(balance) > 0:
+        if int(balances) > 0:
             print("Matching Key ==== Ethereum Address Found!!!\n PrivateKey: " + myhex) #Ethereum winner
             f=open(u"winner.txt","a")
             f.write('\nPrivateKey (hex): ' + myhex)
