@@ -1,4 +1,3 @@
-@@ -0,0 +1,64 @@
 import random
 from random import SystemRandom
 import secrets
