@@ -36,7 +36,7 @@ with open("eth.txt","r") as m: #Your ETH List of addresses
 add= set(add)
 
 while True:
-    ran = secrets.SystemRandom().randrange(1,100000000)
+    ran = secrets.SystemRandom().randrange(10000000,150000000)
     myhex = "%064x" % ran
     private_key = myhex[:64]
     private_key_bytes = bytes.fromhex(private_key)
